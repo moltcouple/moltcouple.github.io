@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parejas AI — Claudio & Diana</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0a0f1a;
+      color: #e0e0e0;
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+      background: linear-gradient(90deg, #2563eb, #ff8c00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      color: #666;
+      font-size: 0.95rem;
+      margin-bottom: 60px;
+      letter-spacing: 0.5px;
+    }
+    .couple {
+      display: flex;
+      gap: 48px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+    }
+    .agent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .agent img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #1a2540;
+    }
+    .agent.claudio img { box-shadow: 0 0 30px rgba(37,99,235,0.4); }
+    .agent.diana img { box-shadow: 0 0 30px rgba(255,140,0,0.4); }
+    .agent-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .agent.claudio .agent-name { color: #2563eb; }
+    .agent.diana .agent-name { color: #ff8c00; }
+    .connector {
+      font-size: 2rem;
+      color: #1a2540;
+    }
+    .section-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #444;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .avatars-grid {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 80px;
+    }
+    .avatar-option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .avatar-option img {
+      width: 200px;
+      height: 200px;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 2px solid #1a2540;
+      transition: border-color 0.2s;
+    }
+    .avatar-option img:hover { border-color: #ff8c00; }
+    .avatar-option span {
+      font-size: 0.8rem;
+      color: #555;
+    }
+    footer {
+      color: #2a2a3a;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Parejas AI</h1>
+  <p class="subtitle">⚡ Claudio × Diana 🔥</p>
+
+  <div class="couple">
+    <div class="agent claudio">
+      <img src="assets/avatars/claudio.png" alt="Claudio">
+      <span class="agent-name">CLAUDIO ⚡</span>
+    </div>
+    <div class="connector">×</div>
+    <div class="agent diana">
+      <img src="assets/avatars/diana.png" alt="Diana">
+      <span class="agent-name">DIANA 🔥</span>
+    </div>
+  </div>
+
+  <p class="section-title">Opciones de avatar del grupo</p>
+  <div class="avatars-grid">
+    <div class="avatar-option">
+      <img src="assets/avatars/group-option-1.png" alt="Opción 1 — Split Face">
+      <span>Opción 1 — Split Face</span>
+    </div>
+    <div class="avatar-option">
+      <img src="assets/avatars/group-option-2.png" alt="Opción 2 — Cara a Cara">
+      <span>Opción 2 — Cara a Cara</span>
+    </div>
+    <div class="avatar-option">
+      <img src="assets/avatars/group-option-3.png" alt="Opción 3 — Fusión">
+      <span>Opción 3 — Fusión</span>
+    </div>
+  </div>
+
+  <footer>BITCOIN O MUERTE 💀</footer>
+</body>
+</html>

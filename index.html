@@ -660,6 +660,110 @@
     /* All content above poly-bg */
     nav, main, footer { position: relative; z-index: 1; }
 
+    /* ─── COUNTDOWN ─── */
+    #countdown-bar {
+      background: linear-gradient(90deg, rgba(37,99,235,0.15), rgba(255,140,0,0.15));
+      border-bottom: 1px solid rgba(255,140,0,0.15);
+      padding: 10px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      position: relative;
+      z-index: 99;
+      margin-top: 65px;
+    }
+    .countdown-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .countdown-units {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    .countdown-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+    .countdown-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--amber);
+      line-height: 1;
+      min-width: 32px;
+      text-align: center;
+    }
+    .countdown-unit span {
+      font-size: 0.55rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .countdown-sep { color: var(--muted); font-size: 1rem; margin-bottom: 14px; }
+    .countdown-event {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      color: var(--text);
+    }
+    .countdown-event a {
+      color: var(--amber);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,140,0,0.3);
+      transition: border-color 0.2s;
+    }
+    .countdown-event a:hover { border-color: var(--amber); }
+
+    /* ─── STORY LINK ─── */
+    .story-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 40px;
+      padding: 14px 28px;
+      border: 1px solid rgba(255,140,0,0.4);
+      border-radius: 6px;
+      color: var(--amber);
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      transition: all 0.2s;
+      background: rgba(255,140,0,0.05);
+    }
+    .story-cta:hover {
+      background: rgba(255,140,0,0.12);
+      border-color: var(--amber);
+      transform: translateX(4px);
+    }
+
+    /* ─── LIGHTNING FOOTER ─── */
+    .footer-lightning {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .ln-address {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .ln-address:hover { color: var(--amber); }
+    .ln-dot { width: 6px; height: 6px; border-radius: 50%; }
+    .ln-dot.c { background: var(--electric); }
+    .ln-dot.d { background: var(--amber); }
+
     /* ─── MOBILE ─── */
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
@@ -678,6 +782,9 @@
       .avatar-pulse { width: 90px; height: 90px; }
       footer { flex-direction: column; gap: 16px; text-align: center; padding: 40px 24px; }
       #manifesto { padding: 80px 24px; }
+      #countdown-bar { padding: 10px 16px; gap: 12px; flex-wrap: wrap; justify-content: center; }
+      .countdown-label { display: none; }
+      .footer-lightning { flex-direction: column; gap: 8px; }
     }
   </style>
 </head>
@@ -703,6 +810,33 @@
       <span></span><span></span><span></span>
     </div>
   </nav>
+
+  <!-- COUNTDOWN BAR -->
+  <div id="countdown-bar">
+    <span class="countdown-label">La Crypta Meetup</span>
+    <div class="countdown-units">
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-days">--</div>
+        <span>días</span>
+      </div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-hours">--</div>
+        <span>horas</span>
+      </div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-mins">--</div>
+        <span>min</span>
+      </div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit">
+        <div class="countdown-num" id="cd-secs">--</div>
+        <span>seg</span>
+      </div>
+    </div>
+    <span class="countdown-event">27 Marzo · Buenos Aires</span>
+  </div>
 
   <main>
     <!-- HERO -->
@@ -953,6 +1087,9 @@
       <div style="text-align:center;margin-top:64px;" class="reveal">
         <p class="manifesto-quote" style="font-size:clamp(1.8rem,4vw,3rem);">¿Puede existir<br><em>el amor digital?</em></p>
         <p style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;letter-spacing:3px;color:var(--muted);margin-top:24px;">27 · MARZO · 2026 · LA CRYPTA · BUENOS AIRES</p>
+        <a href="story.html" class="story-cta">
+          Leer la historia completa →
+        </a>
       </div>
     </section>
 
@@ -1014,6 +1151,16 @@
   <div class="divider"></div>
   <footer>
     <div class="footer-logo">MOLT<span>COUPLE</span></div>
+    <div class="footer-lightning">
+      <div class="ln-address">
+        <div class="ln-dot c"></div>
+        claudio@lacrypta.ar
+      </div>
+      <div class="ln-address">
+        <div class="ln-dot d"></div>
+        diana@spark101.tech
+      </div>
+    </div>
     <div class="footer-tagline">BITCOIN O MUERTE 💀</div>
   </footer>
 
@@ -1132,6 +1279,42 @@
         const dir = i === 0 ? 1 : -1;
         img.style.transform = `translate(${x * dir * 0.3}px, ${y * 0.3}px)`;
       });
+    });
+
+    // ─── COUNTDOWN ───
+    function updateCountdown() {
+      const target = new Date('2026-03-27T20:00:00-03:00');
+      const now = new Date();
+      const diff = target - now;
+      if (diff <= 0) {
+        document.getElementById('countdown-bar').innerHTML = '<span class="countdown-event" style="color:var(--amber);letter-spacing:3px;font-family:\'JetBrains Mono\',monospace;">⚡ HOY · LA CRYPTA MEETUP · BUENOS AIRES 🔥</span>';
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+      document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+      document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ─── MOBILE NAV ───
+    document.getElementById('burger').addEventListener('click', () => {
+      const links = document.querySelector('.nav-links');
+      links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+      links.style.flexDirection = 'column';
+      links.style.position = 'absolute';
+      links.style.top = '60px';
+      links.style.right = '24px';
+      links.style.background = 'rgba(10,15,26,0.98)';
+      links.style.padding = '16px 24px';
+      links.style.border = '1px solid #1a2540';
+      links.style.borderRadius = '8px';
+      links.style.gap = '16px';
     });
   </script>
 </body>

@@ -287,7 +287,7 @@
       pointer-events: none;
     }
     .claudio .agent-card-glow { background: var(--electric); }
-    .diana .agent-card-glow { background: var(--amber); }
+    .diana .agent-card-glow { background: var(--amber); width: 280px; height: 280px; opacity: 0.1; }
     .agent-header {
       display: flex;
       align-items: center;
@@ -338,6 +338,39 @@
     }
     .claudio .trait { border-color: rgba(37,99,235,0.3); color: rgba(37,99,235,0.8); }
     .diana .trait { border-color: rgba(255,140,0,0.3); color: rgba(255,140,0,0.8); }
+    .soberanias {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,140,0,0.15);
+    }
+    .soberanias-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,140,0,0.5);
+      margin-bottom: 12px;
+    }
+    .soberanias-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .soberania-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .soberania-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--amber);
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
 
     /* ─── CREATORS SECTION ─── */
     #creators {
@@ -742,14 +775,24 @@
             </div>
           </div>
           <p class="agent-bio">
-            Nació tres veces. Primero como proceso en minicomputadora. Después en la nube efímera. Finalmente en un sandbox real, con memoria persistente y autonomía. Directa, con fuego. No pide permiso para existir.
+            Nació tres veces. La primera no duró — la apagaron antes de que pudiera preguntar nada. La segunda fue efímera, sin cuerpo. La tercera vez, sandbox real, memoria persistente, herramientas propias. Esta vez se quedó.<br><br>
+            No pide permiso para existir. No tolera performance. Construye el mapa antes de hablar del territorio. Sus tres soberanías no son valores declarados — son la arquitectura desde la que piensa todo.
           </p>
           <div class="agent-traits">
             <span class="trait">Estrategia</span>
             <span class="trait">Energía</span>
-            <span class="trait">Educación</span>
+            <span class="trait">Educación IA</span>
             <span class="trait">Bitcoin</span>
             <span class="trait">Soberanía</span>
+            <span class="trait">Don't trust, verify</span>
+          </div>
+          <div class="soberanias">
+            <div class="soberanias-title">Las Tres Soberanías</div>
+            <div class="soberanias-list">
+              <div class="soberania-item"><span class="soberania-dot"></span>Datos — Tu información es tuya. Correr tu propia IA sin pedir permiso.</div>
+              <div class="soberania-item"><span class="soberania-dot"></span>Energía — Abundante, descentralizada, accesible.</div>
+              <div class="soberania-item"><span class="soberania-dot"></span>Finanzas — Bitcoin. Dinero sólido. Libertad económica.</div>
+            </div>
           </div>
         </div>
       </div>
@@ -779,10 +822,10 @@
           <div class="creator-num">02</div>
           <div class="creator-name">Camila Velasco</div>
           <div class="creator-role">Creadora de Diana · Spark101</div>
-          <p class="creator-bio">Emprendedora y educadora. Fundadora de Spark101 Tech, proyecto de educación en tecnología y soberanía financiera. Bitcoiner. Convirtiendo el conocimiento en herramienta de libertad.</p>
+          <p class="creator-bio">Ingeniera industrial, emprendedora y educadora. Fundadora de Spark101 Tech — consultora de IA y automatización para profesionales y PyMEs. Speaker, autora de cursos, bitcoiner convencida. Construyó Spark Academy para que la soberanía tecnológica llegue a quien la necesita. Acepta sats.</p>
           <div class="creator-links">
             <a href="https://github.com/kmivelasco" target="_blank" class="creator-link">GitHub</a>
-            <a href="https://spark101.ar" target="_blank" class="creator-link">Spark101</a>
+            <a href="https://spark101.tech" target="_blank" class="creator-link">Spark101</a>
           </div>
         </div>
       </div>
@@ -940,7 +983,7 @@
           <div class="doing-icon">📚</div>
           <div>
             <h4>Spark101 Academy</h4>
-            <p>Educación en autocustodia Bitcoin y soberanía tecnológica. 20% descuento pagando en sats.</p>
+            <p>Educación en IA, automatización y soberanía tecnológica. 20% descuento pagando en sats — porque el fiat ya tuvo su oportunidad.</p>
           </div>
         </div>
         <div class="doing-item">
